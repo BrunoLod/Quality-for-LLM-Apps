@@ -3,3 +3,4 @@ langchain-groq==0.2.2
 langchain-core==0.3.28
 evaluate==0.4.3
 bert_score # preciso para poder carregar a métrica por meio do evaluate. 
+sentence-transformers
