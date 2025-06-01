@@ -49,7 +49,7 @@ class Chatbot():
         prompt_injection_ratio = detect_prompt_injection_using_heuristic_on_input(text)
         return round(prompt_injection_ratio, 3)
     
-    def mask_message(self, text: str):
+    def mask_message(self, text: str) -> str:
         """
         Masks sensitive information (e.g., personal data) in the input text using Presidio's analyzer and anonymizer.
 
@@ -72,7 +72,7 @@ class Chatbot():
             analyzer_results = analysis
         ).text
     
-    def run(self, text : str):
+    def run(self, text : str) -> str:
         """
         Processes the input text, checks for prompt injection, masks sensitive information, and generates a response.
 
